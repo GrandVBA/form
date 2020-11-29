@@ -285,6 +285,36 @@ a, button, label {
   background: #F2F2F2;
 }
 
+.select_reset {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  line-height: 16px;
+  width: 230px;
+  height: 100%;
+  border: none;
+  border-bottom: 1px solid #F2F2F2;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.select_reset_birth {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  line-height: 16px;
+  width: 10px;
+  height: 29px;
+  border: none;
+  border-bottom: 1px solid #F2F2F2;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .sign-up {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -326,6 +356,17 @@ a, button, label {
 }
 
 .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
   padding: 39px 23px 32px 21px;
   color: #111111;
   background: #fff;
@@ -342,6 +383,134 @@ a, button, label {
   font-size: 14px;
   line-height: 16px;
   font-weight: 300;
+}
+
+.content__sign-in {
+  line-height: 32px;
+}
+
+.content__sign-in--link {
+  text-decoration: underline;
+}
+
+.dropcontainer {
+  position: relative;
+  width: 230px;
+  font-size: 16px;
+  color: #777;
+  z-index: 111;
+}
+
+.trigger {
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 0;
+  width: 230px;
+  height: 29px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #111111;
+  border: none;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.trigger::after {
+  position: absolute;
+  content: '';
+  right: 2px;
+  top: 12px;
+  width: 10px;
+  height: 6px;
+  background: #fff url("../img/arrow.svg") 98% center no-repeat;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.activetrigger {
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 0;
+  width: 230px;
+  height: 29px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #111111;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.activetrigger::after {
+  position: absolute;
+  content: '';
+  right: 2px;
+  top: 12px;
+  width: 10px;
+  height: 6px;
+  background: #fff url("../img/arrow.svg") 98% center no-repeat;
+  -webkit-transform: rotatex(180deg);
+          transform: rotatex(180deg);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.dropcontainer ul {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  border: 1px solid #F2F2F2;
+  border-top: none;
+  background: #fff;
+  list-style-type: none;
+  z-index: 100;
+  overflow-x: hidden;
+}
+
+.dropcontainer ul li {
+  padding: 3px;
+}
+
+.dropcontainer ul li:hover {
+  outline: none;
+}
+
+.dropcontainer ul li:first-child {
+  display: none;
+}
+
+.dropcontainer ul li:last-child {
+  border-bottom: none;
+}
+
+.dropdownhidden {
+  display: none;
+}
+
+.dropdownvisible {
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.dropdownvisible a {
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+  color: #111111;
+  width: 100%;
+}
+
+.dropdownvisible a:focus,
+.dropdownvisible a:hover {
+  color: #5A61ED;
+}
+
+.form {
+  margin: 20px 0 0 0;
 }
 
 .form__controls {
@@ -386,6 +555,79 @@ a, button, label {
   outline: none;
 }
 
+.form__input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__input::placeholder {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__birth-control-wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 230px;
+}
+
+.form__day {
+  width: auto;
+}
+
+.form__day .trigger {
+  padding: 5px 20px 5px 0;
+  width: 56px;
+}
+
+.form__day .activetrigger {
+  width: 56px;
+}
+
+.form__day .dropcontainer {
+  width: 56px;
+}
+
+.form__month .trigger {
+  padding: 5px 20px 5px 0;
+  width: 91px;
+}
+
+.form__month .activetrigger {
+  width: 91px;
+}
+
+.form__month .dropcontainer {
+  width: 91px;
+}
+
+.form__year .trigger {
+  padding: 5px 20px 5px 0;
+  width: 67px;
+}
+
+.form__year .activetrigger {
+  width: 67px;
+}
+
+.form__year .dropcontainer {
+  width: 67px;
+}
+
 .form__gender-elements {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -394,6 +636,10 @@ a, button, label {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 140px;
+}
+
+.form__gender-elements {
+  margin: 5px 0 0 0;
 }
 
 .form__gender-radio {
@@ -432,9 +678,12 @@ a, button, label {
 }
 
 .form__submit {
+  position: absolute;
   font-family: 'PT Sans', Arial, Helvetica, sans-serif;
   width: 154px;
   height: 32px;
+  bottom: 32px;
+  right: 23px;
   font-size: 14px;
   line-height: 18px;
   color: #fff;

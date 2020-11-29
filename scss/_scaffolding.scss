@@ -57,3 +57,33 @@ a, button, label {
 
   background: $lightviolet-color;
 }
+
+.select_reset {
+  display: block;
+  box-sizing: border-box;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  width: 230px;
+  height: 100%;
+
+  border: none;
+  border-bottom: 1px solid $lightviolet-color;
+  appearance: none;
+}
+
+.select_reset_birth {
+  display: block;
+  box-sizing: border-box;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  width: 10px;
+  height: 29px;
+
+  border: none;
+  border-bottom: 1px solid $lightviolet-color;
+  appearance: none;
+}

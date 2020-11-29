@@ -1,0 +1,131 @@
+.dropcontainer {
+  position:relative;
+
+  width: 230px;
+
+	font-size: 16px;
+  color: #777;
+
+  z-index: 111;
+} 
+
+.trigger {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+
+  padding: 5px 0;
+
+  width: 230px;
+  height: 29px;
+  
+	font-size: 14px;
+  line-height: 16px;
+  color: $black-color;
+  
+  border: none;
+  border-bottom: 1px solid $lightviolet-color;
+  
+  &::after {
+    position: absolute;
+    content: '';
+
+    right: 2px;
+    top: 12px;
+
+    width: 10px;
+    height: 6px;
+
+    background: #fff url('../img/arrow.svg') 98% center no-repeat;
+    transform: rotateX(0);
+    transition: all 0.5s ease;
+  }
+}
+
+.activetrigger {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  
+  padding: 5px 0;
+
+  width: 230px;
+  height: 29px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: $black-color;
+	
+	border-bottom: 1px solid $lightviolet-color;
+  
+  &::after {
+    position: absolute;
+    content: '';
+
+    right: 2px;
+    top: 12px;
+
+    width: 10px;
+    height: 6px;
+
+    background: #fff url('../img/arrow.svg') 98% center no-repeat;
+    transform: rotatex(180deg);
+    transition: all 0.5s ease;
+  }
+}
+
+.dropcontainer ul {
+  box-sizing: border-box;
+
+  margin: 0;
+	
+	width: 100%;
+	
+  border: 1px solid $lightviolet-color;
+	border-top: none;
+  background: #fff;
+  list-style-type: none;
+  
+  z-index: 100;
+  
+  overflow-x: hidden; 
+}
+
+.dropcontainer ul li {
+	padding: 3px;
+}
+
+.dropcontainer ul li:hover {
+	outline: none;
+}
+
+.dropcontainer ul li:first-child {
+	display: none;
+}
+
+.dropcontainer ul li:last-child {
+	border-bottom: none;
+}
+
+.dropdownhidden {
+	display: none;
+}
+
+.dropdownvisible {
+  max-height: 200px;
+  overflow-y: scroll;
+
+  & a {
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    color: $black-color;
+
+    width: 100%;
+  }
+
+  & a:focus,
+  & a:hover {
+    color: $violet-color;
+  }
+}
