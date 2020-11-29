@@ -1,39 +1,39 @@
 @font-face {
   font-family: 'Work Sans';
-  src: url("WorkSans-Regular.eot");
-  src: local("Work Sans"), local("WorkSans-Regular"), url("WorkSans-Regular.eot?#iefix") format("embedded-opentype"), url("WorkSans-Regular.woff2") format("woff2"), url("WorkSans-Regular.woff") format("woff"), url("WorkSans-Regular.ttf") format("truetype");
+  src: url("../fonts/Work-Sans/WorkSans-Regular.eot");
+  src: local("Work Sans"), local("WorkSans-Regular"), url("../fonts/Work-Sans/WorkSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Work-Sans/WorkSans-Regular.woff2") format("woff2"), url("../fonts/Work-Sans/WorkSans-Regular.woff") format("woff"), url("../fonts/Work-Sans/WorkSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Work Sans';
-  src: url("WorkSans-ExtraLight.eot");
-  src: local("Work Sans ExtraLight"), local("WorkSans-ExtraLight"), url("WorkSans-ExtraLight.eot?#iefix") format("embedded-opentype"), url("WorkSans-ExtraLight.woff2") format("woff2"), url("WorkSans-ExtraLight.woff") format("woff"), url("WorkSans-ExtraLight.ttf") format("truetype");
+  src: url("../fonts/Work-Sans/WorkSans-ExtraLight.eot");
+  src: local("Work Sans ExtraLight"), local("WorkSans-ExtraLight"), url("../fonts/Work-Sans/WorkSans-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Work-Sans/WorkSans-ExtraLight.woff2") format("woff2"), url("../fonts/Work-Sans/WorkSans-ExtraLight.woff") format("woff"), url("../fonts/Work-Sans/WorkSans-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Work Sans';
-  src: url("WorkSans-Medium.eot");
-  src: local("Work Sans Medium"), local("WorkSans-Medium"), url("WorkSans-Medium.eot?#iefix") format("embedded-opentype"), url("WorkSans-Medium.woff2") format("woff2"), url("WorkSans-Medium.woff") format("woff"), url("WorkSans-Medium.ttf") format("truetype");
+  src: url("../fonts/Work-Sans/WorkSans-Medium.eot");
+  src: local("Work Sans Medium"), local("WorkSans-Medium"), url("../fonts/Work-Sans/WorkSans-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Work-Sans/WorkSans-Medium.woff2") format("woff2"), url("../fonts/Work-Sans/WorkSans-Medium.woff") format("woff"), url("../fonts/Work-Sans/WorkSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Work Sans';
-  src: url("WorkSans-Light.eot");
-  src: local("Work Sans Light"), local("WorkSans-Light"), url("WorkSans-Light.eot?#iefix") format("embedded-opentype"), url("WorkSans-Light.woff2") format("woff2"), url("WorkSans-Light.woff") format("woff"), url("WorkSans-Light.ttf") format("truetype");
+  src: url("../fonts/Work-Sans/WorkSans-Light.eot");
+  src: local("Work Sans Light"), local("WorkSans-Light"), url("../fonts/Work-Sans/WorkSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Work-Sans/WorkSans-Light.woff2") format("woff2"), url("../fonts/Work-Sans/WorkSans-Light.woff") format("woff"), url("../fonts/Work-Sans/WorkSans-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PT Sans';
-  src: url("PTSans-Regular.eot");
-  src: local("PT Sans"), local("PTSans-Regular"), url("PTSans-Regular.eot?#iefix") format("embedded-opentype"), url("PTSans-Regular.woff2") format("woff2"), url("PTSans-Regular.woff") format("woff"), url("PTSans-Regular.ttf") format("truetype");
+  src: url("../fonts/PT-Sans/PTSans-Regular.eot");
+  src: local("PT Sans"), local("PTSans-Regular"), url("../fonts/PT-Sans/PTSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PT-Sans/PTSans-Regular.woff2") format("woff2"), url("../fonts/PT-Sans/PTSans-Regular.woff") format("woff"), url("../fonts/PT-Sans/PTSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -217,14 +217,29 @@ template {
   display: none;
 }
 
-body {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+html {
+  height: 100%;
 }
 
-h1, h2, h3, p, ul {
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, p, ul, fieldset {
   margin: 0;
   padding: 0;
   list-style: none;
+  border: none;
 }
 
 a {
@@ -253,4 +268,176 @@ a, button, label {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 800px;
+  height: 600px;
+  background: #F2F2F2;
+}
+
+.sign-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 665px;
+  height: 481px;
+}
+
+.sign-up__block-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 138px;
+  background: #5A61ED;
+}
+
+.sign-up__title {
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+  margin: 0 0 70px 15px;
+  font-size: 49px;
+  line-height: 63px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  width: 170px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.sign-up__content {
+  width: 100%;
+}
+
+.content {
+  padding: 39px 23px 32px 21px;
+  color: #111111;
+  background: #fff;
+}
+
+.content__title {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 500;
+  letter-spacing: -.4px;
+}
+
+.content__description {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
+
+.form__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0 16px 0;
+  width: 235px;
+  height: 43px;
+}
+
+.form__label {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 300;
+  color: #7C7C7C;
+}
+
+.form__input {
+  padding: 5px 0;
+  width: 230px;
+  border: none;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.form__input:hover, .form__input:focus, .form__input:active {
+  outline: none;
+}
+
+.form__gender-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 140px;
+}
+
+.form__gender-radio {
+  display: none;
+}
+
+.form__gender-radio:checked + .form__gender-label::after {
+  position: absolute;
+  content: '';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 6px;
+  height: 6px;
+  top: 7px;
+  left: 3px;
+  border-radius: 50%;
+  background: #5A61ED;
+}
+
+.form__gender-label {
+  position: relative;
+  padding: 0 0 0 18px;
+}
+
+.form__gender-label::before {
+  position: absolute;
+  content: '';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  top: 4px;
+  left: 0;
+  border-radius: 50%;
+  border: 0.7px solid #5A61ED;
+}
+
+.form__submit {
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+  width: 154px;
+  height: 32px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  background: #5A61ED;
+  border: none;
 }

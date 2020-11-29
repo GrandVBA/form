@@ -1,0 +1,114 @@
+.form {
+
+  &__controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__control {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 0 16px 0;
+
+    width: 235px;
+    height: 43px;
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+    color: $label-color
+  }
+
+  &__input {
+    padding: 5px 0;
+
+    width: 230px;
+
+    border: none;
+    border-bottom: 1px solid $lightviolet-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+
+
+  &__gender {
+    &-elements {
+      display: flex;
+      justify-content: space-between;
+
+      width: 140px;
+    }
+
+    &__element {
+  
+    }
+
+    &-radio {
+      display: none;
+
+      &:checked + .form__gender-label {
+
+        &::after {
+          position: absolute;
+          content: '';
+
+          box-sizing: border-box;
+
+          width: 6px;
+          height: 6px;
+
+          top: 7px;
+          left: 3px;
+
+          border-radius: 50%;
+          background: $violet-color;
+        }
+      }
+    }
+
+    &-label {
+      position: relative;
+      padding: 0 0 0 18px;
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        box-sizing: border-box;
+
+        width: 12px;
+        height: 12px;
+
+        top: 4px;
+        left: 0;
+
+        border-radius: 50%;
+        border: .7px solid $violet-color;
+      }
+    }
+  }
+
+  &__submit {
+    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+
+    width: 154px;
+    height: 32px;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    color: $white-color;
+
+    background: $violet-color;
+    border: none;
+  }
+}
