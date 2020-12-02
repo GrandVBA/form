@@ -11,6 +11,8 @@
     display: flex;
     flex-direction: column;
 
+    box-sizing: border-box;
+
     margin: 0 0 16px 0;
 
     width: 235px;
@@ -21,13 +23,18 @@
     font-size: 12px;
     line-height: 14px;
     font-weight: 300;
-    color: $label-color
+    color: $label-color;
   }
 
   &__input {
+    box-sizing: border-box;
     padding: 5px 0;
 
     width: 230px;
+    height: 29px;
+
+    font-size: 14px;
+    line-height: 16px;
 
     border: none;
     border-bottom: 1px solid $lightviolet-color;
@@ -41,6 +48,43 @@
     &::placeholder {
       font-size: 14px;
       line-height: 16px;
+    }
+
+    &:focus,
+    &:active {
+      & + .form__bar:before,
+      & + .form__bar:after {
+        width: 50%;
+        background: $violet-color;
+      }
+    }
+  }
+
+  &__bar {
+    position: relative;
+    display: block;
+    width: 230px;
+  
+    &:before, 
+    &:after {
+      position: absolute;
+      content: '';
+
+      height: 2px;
+      width: 0%;
+
+      bottom: 0;
+      
+      background: $violet-color;
+      transition: .15s ease all;
+    }
+      
+    &:before {
+      left: 50%;
+    }
+      
+    &:after {
+      right: 50%;
     }
   }
 
@@ -56,10 +100,18 @@
     & .trigger {
       padding: 5px 20px 5px 0;
       width: 56px;
+
+      & ~ .form__bar {
+        width: auto;
+      }
     }
 
     & .activetrigger {
       width: 56px;
+
+      & ~ .form__bar {
+        width: auto;
+      }
     }
 
     & .dropcontainer {
@@ -71,10 +123,18 @@
     & .trigger {
       padding: 5px 20px 5px 0;
       width: 91px;
+
+      & ~ .form__bar {
+        width: auto;
+      }
     }
 
     & .activetrigger {
       width: 91px;
+
+      & ~ .form__bar {
+        width: auto;
+      }
     }
 
     & .dropcontainer {
@@ -86,16 +146,25 @@
     & .trigger {
       padding: 5px 20px 5px 0;
       width: 67px;
+
+      & ~ .form__bar {
+        width: auto;
+      }
     }
 
     & .activetrigger {
       width: 67px;
+
+      & ~ .form__bar {
+        width: auto;
+      }
     }
 
     & .dropcontainer {
       width: 67px;
     }
   }
+      
 
   &__gender {
     &-elements {
@@ -110,7 +179,11 @@
     }
 
     &-radio {
-      display: none;
+      
+      &:focus + .form__gender-label::before,
+      &:focus + .form__gender-label::after {
+        transform: scale(1.3);
+      }
 
       &:checked + .form__gender-label {
 
@@ -123,11 +196,12 @@
           width: 6px;
           height: 6px;
 
-          top: 7px;
+          top: 5px;
           left: 3px;
 
           border-radius: 50%;
           background: $violet-color;
+          transition: all 0.2s ease;
         }
       }
     }
@@ -135,6 +209,10 @@
     &-label {
       position: relative;
       padding: 0 0 0 18px;
+
+      font-size: 14px;
+      line-height: 16px;
+      
 
       &::before {
         position: absolute;
@@ -145,11 +223,12 @@
         width: 12px;
         height: 12px;
 
-        top: 4px;
+        top: 2px;
         left: 0;
 
         border-radius: 50%;
         border: .7px solid $violet-color;
+        transition: all 0.2s ease;
       }
     }
   }
@@ -171,5 +250,39 @@
 
     background: $violet-color;
     border: none;
+  }
+}
+
+.error {
+  animation: shake .4s;
+}
+
+@keyframes shake {
+  15% {
+    transform: translateX(9px);
+  }
+  30% {
+    transform: translateX(-9px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  50% {
+    transform: translateX(-6px);
+  }
+  65% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.invalid + .form__bar,
+.invalid-email +.form__bar {
+  &::after,
+  &::before {
+    background: $red-color;
+    width: 50%;
   }
 }

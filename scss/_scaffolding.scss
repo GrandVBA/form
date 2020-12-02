@@ -87,3 +87,24 @@ a, button, label {
   border-bottom: 1px solid $lightviolet-color;
   appearance: none;
 }
+
+.feedback {
+  margin: 180px 0 0 43px;
+
+  &__title {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+  }
+}
+
+.hidden {
+  display: none;
+}

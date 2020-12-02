@@ -40,6 +40,21 @@
     transform: rotateX(0);
     transition: all 0.5s ease;
   }
+
+  &:focus {
+    & ~ .form__bar:before,
+    & ~ .form__bar:after {
+      width: 50%;
+      background: $violet-color;
+    }
+  }
+
+  &:active {
+    & ~ .form__bar:before,
+    & ~ .form__bar:after {
+      display: none;
+    }
+  }
 }
 
 .activetrigger {
@@ -50,7 +65,7 @@
   padding: 5px 0;
 
   width: 230px;
-  height: 29px;
+  height: 29px !important;
 
   font-size: 14px;
   line-height: 16px;
@@ -127,5 +142,6 @@
   & a:focus,
   & a:hover {
     color: $violet-color;
+    text-decoration: underline;
   }
 }

@@ -3,29 +3,29 @@ function tamingselect()
 	if(!document.getElementById && !document.createTextNode){return;}
 	
 // Classes for the link and the visible dropdown
-	var ts_selectclass='turnintodropdown'; 	// class to identify selects
-	var ts_listclass='turnintoselect';		// class to identify ULs
-	var ts_boxclass='dropcontainer'; 		// parent element
-	var ts_triggeron='activetrigger'; 		// class for the active trigger link
-	var ts_triggeroff='trigger';			// class for the inactive trigger link
-	var ts_dropdownclosed='dropdownhidden'; // closed dropdown
-	var ts_dropdownopen='dropdownvisible';	// open dropdown
+	let ts_selectclass='turnintodropdown'; 	// class to identify selects
+	let ts_listclass='turnintoselect';		// class to identify ULs
+	let ts_boxclass='dropcontainer'; 		// parent element
+	let ts_triggeron='activetrigger'; 		// class for the active trigger link
+	let ts_triggeroff='trigger';			// class for the inactive trigger link
+	let ts_dropdownclosed='dropdownhidden'; // closed dropdown
+	let ts_dropdownopen='dropdownvisible';	// open dropdown
 /*
 	Turn all selects into DOM dropdowns
 */
-	var count=0;
-	var toreplace=new Array();
-	var sels=document.getElementsByTagName('select');
-	for(var i=0;i<sels.length;i++){
+	let count=0;
+	let toreplace=new Array();
+	let sels=document.getElementsByTagName('select');
+	for(let i=0;i<sels.length;i++){
 		if (ts_check(sels[i],ts_selectclass))
 		{
-			var hiddenfield=document.createElement('input');
+			let hiddenfield=document.createElement('input');
 			hiddenfield.name=sels[i].name;
 			hiddenfield.type='hidden';
 			hiddenfield.id=sels[i].id;
 			hiddenfield.value=sels[i].options[0].value;
 			sels[i].parentNode.insertBefore(hiddenfield,sels[i])
-			var trigger=document.createElement('a');
+			let trigger=document.createElement('a');
 			ts_addclass(trigger,ts_triggeroff);
 			trigger.href='#';
 			trigger.onclick=function(){
@@ -35,11 +35,11 @@ function tamingselect()
 			}
 			trigger.appendChild(document.createTextNode(sels[i].options[0].text));
 			sels[i].parentNode.insertBefore(trigger,sels[i]);
-			var replaceUL=document.createElement('ul');
-			for(var j=0;j<sels[i].getElementsByTagName('option').length;j++)
+			let replaceUL=document.createElement('ul');
+			for(let j=0;j<sels[i].getElementsByTagName('option').length;j++)
 			{
-				var newli=document.createElement('li');
-				var newa=document.createElement('a');
+				let newli=document.createElement('li');
+				let newa=document.createElement('a');
 				newli.v=sels[i].getElementsByTagName('option')[j].value;
 				newli.elm=hiddenfield;
 				newli.istrigger=trigger;
@@ -57,7 +57,7 @@ function tamingselect()
 				replaceUL.appendChild(newli);
 			}
 			ts_addclass(replaceUL,ts_dropdownclosed);
-			var div=document.createElement('div');
+			let div=document.createElement('div');
 			div.appendChild(replaceUL);
 			ts_addclass(div,ts_boxclass);
 			sels[i].parentNode.insertBefore(div,sels[i])
@@ -70,16 +70,16 @@ function tamingselect()
 	Turn all ULs with the class defined above into dropdown navigations
 */	
 
-	var uls=document.getElementsByTagName('ul');
-	for(var i=0;i<uls.length;i++)
+	let uls=document.getElementsByTagName('ul');
+	for(let i=0;i<uls.length;i++)
 	{
 		if(ts_check(uls[i],ts_listclass))
 		{
-			var newform=document.createElement('form');
-			var newselect=document.createElement('select');
+			let newform=document.createElement('form');
+			let newselect=document.createElement('select');
 			for(j=0;j<uls[i].getElementsByTagName('a').length;j++)
 			{
-				var newopt=document.createElement('option');
+				let newopt=document.createElement('option');
 				newopt.value=uls[i].getElementsByTagName('a')[j].href;	
 				newopt.appendChild(document.createTextNode(uls[i].getElementsByTagName('a')[j].innerHTML));	
 				newselect.appendChild(newopt);
@@ -103,7 +103,7 @@ function tamingselect()
 	}
 	function ts_swapclass(o,c1,c2)
 	{
-		var cn=o.className
+		let cn=o.className
 		o.className=!ts_check(o,c1)?cn.replace(c2,c1):cn.replace(c1,c2);
 	}
 	function ts_addclass(o,c)

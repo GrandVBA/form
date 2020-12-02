@@ -315,6 +315,27 @@ a, button, label {
           appearance: none;
 }
 
+.feedback {
+  margin: 180px 0 0 43px;
+}
+
+.feedback__title {
+  margin: 0 0 10px 0;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+.feedback__text {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
+
+.hidden {
+  display: none;
+}
+
 .sign-up {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -393,6 +414,329 @@ a, button, label {
   text-decoration: underline;
 }
 
+.content__sign-in--link:focus, .content__sign-in--link:hover {
+  text-decoration: none;
+}
+
+.form {
+  margin: 20px 0 0 0;
+}
+
+.form__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form__control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 0 16px 0;
+  width: 235px;
+  height: 43px;
+}
+
+.form__label {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 300;
+  color: #7C7C7C;
+}
+
+.form__input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 0;
+  width: 230px;
+  height: 29px;
+  font-size: 14px;
+  line-height: 16px;
+  border: none;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.form__input:hover, .form__input:focus, .form__input:active {
+  outline: none;
+}
+
+.form__input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__input::placeholder {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__input:focus + .form__bar:before,
+.form__input:focus + .form__bar:after, .form__input:active + .form__bar:before,
+.form__input:active + .form__bar:after {
+  width: 50%;
+  background: #5A61ED;
+}
+
+.form__bar {
+  position: relative;
+  display: block;
+  width: 230px;
+}
+
+.form__bar:before, .form__bar:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  background: #5A61ED;
+  -webkit-transition: .15s ease all;
+  transition: .15s ease all;
+}
+
+.form__bar:before {
+  left: 50%;
+}
+
+.form__bar:after {
+  right: 50%;
+}
+
+.form__birth-control-wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 230px;
+}
+
+.form__day {
+  width: auto;
+}
+
+.form__day .trigger {
+  padding: 5px 20px 5px 0;
+  width: 56px;
+}
+
+.form__day .trigger ~ .form__bar {
+  width: auto;
+}
+
+.form__day .activetrigger {
+  width: 56px;
+}
+
+.form__day .activetrigger ~ .form__bar {
+  width: auto;
+}
+
+.form__day .dropcontainer {
+  width: 56px;
+}
+
+.form__month .trigger {
+  padding: 5px 20px 5px 0;
+  width: 91px;
+}
+
+.form__month .trigger ~ .form__bar {
+  width: auto;
+}
+
+.form__month .activetrigger {
+  width: 91px;
+}
+
+.form__month .activetrigger ~ .form__bar {
+  width: auto;
+}
+
+.form__month .dropcontainer {
+  width: 91px;
+}
+
+.form__year .trigger {
+  padding: 5px 20px 5px 0;
+  width: 67px;
+}
+
+.form__year .trigger ~ .form__bar {
+  width: auto;
+}
+
+.form__year .activetrigger {
+  width: 67px;
+}
+
+.form__year .activetrigger ~ .form__bar {
+  width: auto;
+}
+
+.form__year .dropcontainer {
+  width: 67px;
+}
+
+.form__gender-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 140px;
+}
+
+.form__gender-elements {
+  margin: 5px 0 0 0;
+}
+
+.form__gender-radio:focus + .form__gender-label::before,
+.form__gender-radio:focus + .form__gender-label::after {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.form__gender-radio:checked + .form__gender-label::after {
+  position: absolute;
+  content: '';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 6px;
+  height: 6px;
+  top: 5px;
+  left: 3px;
+  border-radius: 50%;
+  background: #5A61ED;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.form__gender-label {
+  position: relative;
+  padding: 0 0 0 18px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__gender-label::before {
+  position: absolute;
+  content: '';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  top: 2px;
+  left: 0;
+  border-radius: 50%;
+  border: 0.7px solid #5A61ED;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.form__submit {
+  position: absolute;
+  font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+  width: 154px;
+  height: 32px;
+  bottom: 32px;
+  right: 23px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  background: #5A61ED;
+  border: none;
+}
+
+.error {
+  -webkit-animation: shake .4s;
+          animation: shake .4s;
+}
+
+@-webkit-keyframes shake {
+  15% {
+    -webkit-transform: translateX(9px);
+            transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+            transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  15% {
+    -webkit-transform: translateX(9px);
+            transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+            transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.invalid + .form__bar::after, .invalid + .form__bar::before,
+.invalid-email + .form__bar::after,
+.invalid-email + .form__bar::before {
+  background: #FF2222;
+  width: 50%;
+}
+
 .dropcontainer {
   position: relative;
   width: 230px;
@@ -430,6 +774,17 @@ a, button, label {
   transition: all 0.5s ease;
 }
 
+.trigger:focus ~ .form__bar:before,
+.trigger:focus ~ .form__bar:after {
+  width: 50%;
+  background: #5A61ED;
+}
+
+.trigger:active ~ .form__bar:before,
+.trigger:active ~ .form__bar:after {
+  display: none;
+}
+
 .activetrigger {
   display: block;
   position: relative;
@@ -437,7 +792,7 @@ a, button, label {
           box-sizing: border-box;
   padding: 5px 0;
   width: 230px;
-  height: 29px;
+  height: 29px !important;
   font-size: 14px;
   line-height: 16px;
   color: #111111;
@@ -507,186 +862,5 @@ a, button, label {
 .dropdownvisible a:focus,
 .dropdownvisible a:hover {
   color: #5A61ED;
-}
-
-.form {
-  margin: 20px 0 0 0;
-}
-
-.form__controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.form__control {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 0 16px 0;
-  width: 235px;
-  height: 43px;
-}
-
-.form__label {
-  font-size: 12px;
-  line-height: 14px;
-  font-weight: 300;
-  color: #7C7C7C;
-}
-
-.form__input {
-  padding: 5px 0;
-  width: 230px;
-  border: none;
-  border-bottom: 1px solid #F2F2F2;
-}
-
-.form__input:hover, .form__input:focus, .form__input:active {
-  outline: none;
-}
-
-.form__input::-webkit-input-placeholder {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.form__input:-ms-input-placeholder {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.form__input::-ms-input-placeholder {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.form__input::placeholder {
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.form__birth-control-wrp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 230px;
-}
-
-.form__day {
-  width: auto;
-}
-
-.form__day .trigger {
-  padding: 5px 20px 5px 0;
-  width: 56px;
-}
-
-.form__day .activetrigger {
-  width: 56px;
-}
-
-.form__day .dropcontainer {
-  width: 56px;
-}
-
-.form__month .trigger {
-  padding: 5px 20px 5px 0;
-  width: 91px;
-}
-
-.form__month .activetrigger {
-  width: 91px;
-}
-
-.form__month .dropcontainer {
-  width: 91px;
-}
-
-.form__year .trigger {
-  padding: 5px 20px 5px 0;
-  width: 67px;
-}
-
-.form__year .activetrigger {
-  width: 67px;
-}
-
-.form__year .dropcontainer {
-  width: 67px;
-}
-
-.form__gender-elements {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 140px;
-}
-
-.form__gender-elements {
-  margin: 5px 0 0 0;
-}
-
-.form__gender-radio {
-  display: none;
-}
-
-.form__gender-radio:checked + .form__gender-label::after {
-  position: absolute;
-  content: '';
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 6px;
-  height: 6px;
-  top: 7px;
-  left: 3px;
-  border-radius: 50%;
-  background: #5A61ED;
-}
-
-.form__gender-label {
-  position: relative;
-  padding: 0 0 0 18px;
-}
-
-.form__gender-label::before {
-  position: absolute;
-  content: '';
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 12px;
-  height: 12px;
-  top: 4px;
-  left: 0;
-  border-radius: 50%;
-  border: 0.7px solid #5A61ED;
-}
-
-.form__submit {
-  position: absolute;
-  font-family: 'PT Sans', Arial, Helvetica, sans-serif;
-  width: 154px;
-  height: 32px;
-  bottom: 32px;
-  right: 23px;
-  font-size: 14px;
-  line-height: 18px;
-  color: #fff;
-  background: #5A61ED;
-  border: none;
+  text-decoration: underline;
 }

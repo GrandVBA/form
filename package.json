@@ -1,0 +1,19 @@
+{
+  "name": "Form",
+  "description": "Registration form. Demo project",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:GrandVBA/form.git"
+  },
+  "devDependencies": {
+    "webpack": "5.9.0",
+    "webpack-cli": "4.2.0"
+  },
+  "scripts": {
+    "test": "eslint js/",
+    "build": "webpack --mode production"
+  },
+  "engines": {
+    "node": "8.11"
+  }
+}

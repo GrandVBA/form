@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.min.css">
   <title>Form</title>
 </head>
 <body>
@@ -26,23 +26,25 @@
             Use the form below to create your account.
           </p>
   
-          <form class="content__form form" action="#">
+          <form class="content__form form" enctype="multipart/form-data" autocomplete="off">
             <fieldset class="form__controls">
               <p class="form__control form__control--f-name">
                 <label class="form__label form__label--f-name" for="first-name">
                   First Name
                 </label>
-                <input class="form__input form__input--f-name" id="first-name" type="text" placeholder="Alice">
+                <input class="form__input form__input--f-name" id="first-name" type="text" name="First Name" placeholder="Alice">
+                <span class="form__bar"></span>
               </p>
               <p class="form__control form__control--l-name">
                 <label class="form__label form__label--l-name" for="last-name">
                   Last Name
                 </label>
-                <input class="form__input form__input--l-name" id="last-name" type="text" placeholder="Miller">
+                <input class="form__input form__input--l-name" id="last-name" type="text" name="Last Name" placeholder="Miller">
+                <span class="form__bar"></span>
               </p>
               <p class="form__control form__control--nationality">
                 <label class="form__label">Nationality</label>
-                <select class="turnintodropdown select_reset">
+                <select class="turnintodropdown select_reset" id="nationality" name="Nationality">
                   <option>American</option>
                   <option>American</option>
                   <option>German</option>
@@ -62,18 +64,21 @@
                   <option>Indian</option>
                   <option>Syrian</option>
                 </select>
+                <span class="form__bar"></span>
               </p>
               <p class="form__control form__control--email">
                 <label class="form__label form__label--email" for="email">
                   E-mail
                 </label>
-                <input class="form__input form__input--email" id="email" type="text" placeholder="alice.miller@yahoo.com">
+                <input class="form__input form__input--email" id="email" type="text" name="E-mail" placeholder="alice.miller@yahoo.com">
+                <span class="form__bar"></span>
               </p>
               <div class="form__control form__control--birth">
                 <label class="form__label">Date of Birth</label>
                 <div class="form__birth-control-wrp">
                   <p class="form__day">
-                    <select class="turnintodropdown select_reset_birth form__select-birth">
+                    <select class="turnintodropdown select_reset_birth form__select-birth" name="Birth day">
+                      <option value="1">1</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -106,9 +111,11 @@
                       <option value="30">30</option>
                       <option value="31">31</option>
                     </select>
+                    <span class="form__bar"></span>
                   </p>
                   <p class="form__month">
-                    <select id="w" class="turnintodropdown select_reset_birth form__select-birth">
+                    <select id="w" class="turnintodropdown select_reset_birth form__select-birth" name="Birth month">
+                      <option>January</option>
                       <option>January</option>
                       <option>February</option>
                       <option>March</option>
@@ -122,9 +129,11 @@
                       <option>November</option>
                       <option>December</option>
                     </select>
+                    <span class="form__bar"></span>
                   </p>
                   <p class="form__year">
-                    <select id="e" class="turnintodropdown select_reset_birth form__select-birth">
+                    <select id="e" class="turnintodropdown select_reset_birth form__select-birth" name="Birth year">
+                      <option>2002</option>
                       <option>2002</option>
                       <option>2001</option>
                       <option>2000</option>
@@ -141,6 +150,7 @@
                       <option>1989</option>
                       <option>1988</option>
                     </select>
+                    <span class="form__bar"></span>
                   </p>
                 </div>
               </div>
@@ -148,11 +158,11 @@
                 <label class="form__label form__label--gender">Gender</label>
                 <div class="form__gender-elements">
                   <p class="form__gender-element form__gender-element--male">
-                    <input class="form__gender-radio form__gender-radio--male" id="male" type="radio" name="gender" value="Male">
+                    <input class="form__gender-radio form__gender-radio--male visually-hidden" id="male" type="radio" name="Gender" value="Male" tabindex="0">
                     <label class="form__gender-label form__gender-label--male" for="male">Male</label>
                   </p>
                   <p class="form__gender-element form__gender-element--female">
-                    <input class="form__gender-radio form__gender-radio--female" id="female" type="radio" name="gender" value="Female" checked>
+                    <input class="form__gender-radio form__gender-radio--female visually-hidden" id="female" type="radio" name="Gender" value="Female" tabindex="0" checked>
                     <label class="form__gender-label form__gender-label--female" for="female">Female</label>
                   </p>
                 </div>
@@ -161,13 +171,15 @@
                 <label class="form__label form__label--password" for="password">
                   Password
                 </label>
-                <input class="form__input form__input--password" id="password" type="password">
+                <input class="form__input form__input--password" id="password" type="password" name="pass">
+                <span class="form__bar"></span>
               </p>
               <p class="form__control form__control--c-password">
                 <label class="form__label form__label--c-password" for="c-password">
                   Confirm Password
                 </label>
-                <input class="form__input form__input--c-password" id="c-password" type="password">
+                <input class="form__input form__input--c-password" id="c-password" type="password" name="c-pass">
+                <span class="form__bar"></span>
               </p>
             </fieldset>
   
@@ -181,18 +193,20 @@
           Have an account? <a href="#" class="content__sign-in--link">Login</a>
         </p>
 
-        <template id="registered">
-          <h2 class="registered__title">
-            Thank You!
-          </h2>
-          <p class="registered__text">
-            you registered!
-          </p>
+        <template id="feedback">
+          <div class="feedback">
+            <h2 class="feedback__title">
+              
+            </h2>
+            <p class="feedback__text">
+              
+            </p>
+          </div>
         </template>
       </div>
     </section>
   </div>
 
-  <script src="js/select.js"></script>
+  <script src="bundle/wp.bundle.js"></script>
 </body>
 </html>

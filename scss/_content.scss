@@ -26,6 +26,11 @@
     line-height: 32px;
     &--link {
       text-decoration: underline;
+
+      &:focus,
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
