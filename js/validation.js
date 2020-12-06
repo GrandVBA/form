@@ -97,7 +97,7 @@
         const re = /\S+@\S+\.\S+/;
   
         if (re.test(emailInput.value)) {
-          emailInput.style.background = `url("../img/check.svg") 98% center no-repeat`;
+          emailInput.style.background = `url("img/check.svg") 98% center no-repeat`;
         } else {
           emailInput.style.background = `none`;
         }
